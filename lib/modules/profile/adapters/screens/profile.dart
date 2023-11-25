@@ -83,7 +83,7 @@ class ProfileHeader extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               const Text(
-                'Biografía del usuario. Esta es una descripción breve del perfil de Twitter. Puedes agregar más detalles aquí.',
+                'Piloto de F1, actualmente trabaja con la escuderia de Red Bull Racing',
                 style: TextStyle(fontSize: 16),
               ),
               const SizedBox(height: 16),
@@ -124,7 +124,7 @@ class TweetList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        _buildTweet('Nombre de Usuario',
+        _buildTweet('RagnarSuku',
             'Este es un tweet de ejemplo. ¡Hola, Twitter! 🐦'),
         _buildTweet('Nombre de Usuario', 'Otro tweet interesante. #Flutter'),
         // Agrega más tweets simulados aquí si lo deseas

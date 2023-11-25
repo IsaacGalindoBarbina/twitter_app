@@ -1,4 +1,5 @@
 //import 'package:examen/kernel/theme/colors_app.dart';
+import 'package:examen/modules/notifications/adapters/screens/info.dart';
 import 'package:flutter/material.dart';
 
 
@@ -88,22 +89,35 @@ class NotificationList extends StatelessWidget {
 class NotificationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-      child: ListTile(
-        leading: CircleAvatar(
-          radius: 24,
-          backgroundColor: Colors.blue,
-          child: Icon(Icons.notifications, size: 24, color: Colors.white),
-        ),
-        title: Text('Notificación de ejemplo'),
-        subtitle: Text('Descripción de la notificación'),
-        trailing: IconButton(
-          icon: Icon(Icons.more_vert),
-          onPressed: () {
-            // Acciones al presionar el ícono de opciones
-            print('Más opciones');
-          },
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => NotificationDetailScreen (
+              title: 'Notificación de ejemplo',
+              description: 'Descripción de la notificación',
+            ),
+          ),
+        );
+      },
+      child: Card(
+        margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+        child: ListTile(
+          leading: CircleAvatar(
+            radius: 24,
+            backgroundColor: Colors.blue,
+            child: Icon(Icons.notifications, size: 24, color: Colors.white),
+          ),
+          title: Text('Notificación de ejemplo'),
+          subtitle: Text('Descripción de la notificación'),
+          trailing: IconButton(
+            icon: Icon(Icons.more_vert),
+            onPressed: () {
+              // Acciones al presionar el ícono de opciones
+              print('Más opciones');
+            },
+          ),
         ),
       ),
     );
